@@ -1,5 +1,6 @@
 # Environment variables
 .env
+.env.*
 
 # Python
 __pycache__/
@@ -22,6 +23,9 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Virtual environments
 .venv/
@@ -29,14 +33,14 @@ venv/
 ENV/
 env/
 
-# IDE
+# IDE and Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-
-# MacOS
+*~
 .DS_Store
+Thumbs.db
 
 # Logs
 *.log
@@ -46,12 +50,21 @@ logs/
 *.db
 *.sqlite3
 
-# Vector store
+# Vector store and embeddings
 chroma_langchain_db/
 
 # Chat history
 chat_logs/
 chat_logs_local_test/
 
-# Test/sample data
-docs/csvs/
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# Data files (keep templates, ignore large CSVs)
+docs/csvs/*.csv
+docs/csvs/.DS_Store
+
+# Lock files for package managers
+uv.lock
+poetry.lock
