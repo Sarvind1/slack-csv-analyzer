@@ -1,0 +1,272 @@
+{
+  "files": {
+    "docs/knowledge/Supplier_PRD_Sop.txt": {
+      "hash": "cbc31d394c6f918918910b38b5760e151a55c8bff4885f8942321693ed039aa0",
+      "vector_ids": [
+        "fac35291-4ca2-4212-b93a-b61a79f5de61",
+        "648f4d9f-bfc8-451b-8288-efa8858e4e54",
+        "543aa285-56a1-410e-9df4-2e6ab73eb221",
+        "c2d378fd-90d8-4519-a421-a8bce73242bb"
+      ],
+      "last_processed": "2025-09-28T06:02:43.718967",
+      "metadata": {
+        "filename": "Supplier_PRD_Sop.txt",
+        "folder": "docs/knowledge",
+        "knowledge_path": ""
+      }
+    },
+    "docs/knowledge/csv_descriptions/otif_pull.md": {
+      "hash": "5534a0277c9d658f209738f418d853e095279e0ed649d4b92588e5a88c05f429",
+      "vector_ids": [
+        "4fee7abb-b6f0-4225-ba0f-07dfed6a3850",
+        "7167a6d4-be8b-4ea1-ad46-4edc70b36ded",
+        "98d33842-6268-4b94-9d19-b94db88563d6",
+        "f865cad1-1404-41d5-870e-10a763ee739f",
+        "04897eba-143e-4332-ad2b-c73ec6a8a4bc",
+        "cf5593c2-1d72-4cc2-a8a2-8ec16717d961",
+        "17672cb5-fc65-402a-aa3f-a53a6be183cc",
+        "977f9f35-64a6-45b4-a264-5b900743006b",
+        "a8393745-508d-48f9-bb01-3da6dd3e9eea",
+        "87f52011-c33c-4068-bb8b-c960444b14e4",
+        "ea547225-0707-40f0-97b2-f819c533533d",
+        "46eba3f7-4bd6-4a9c-8638-ef41a9d99594",
+        "b31fa206-d102-41c6-ad9e-7a2f0888a28c",
+        "c13de5a2-9f95-4879-a8d6-9c2bacaace5f",
+        "e97f0b53-e4c4-4d4c-9a9e-3abc3881f9ef",
+        "de5da237-fa9e-4e7c-888a-0a2566807dfd",
+        "bcb375d1-1c2e-4e3a-af62-50ed5e987626",
+        "1a25f364-377f-42e3-90c1-d843a864b66b",
+        "54192014-06b1-42de-a858-263c3ec4603c",
+        "67347310-89cb-4241-a47c-eaea5a52a6d5",
+        "e601261b-7815-4613-ab0b-eb5ccf68207f",
+        "cafcea51-2a0d-4b37-a18f-88dbacca427d",
+        "d3387d68-6423-4a43-8021-15ced57b59e7",
+        "035a66f0-6dcc-4721-a7ac-f75c51b59057",
+        "29dae2b4-4ab7-49df-b349-a3c4788fb76a",
+        "c6c787c2-cdfe-4c20-9ce6-26dbfe92b9f9",
+        "e74c5593-88ff-4689-8483-e6b84f354e11",
+        "c5edea90-35c8-46f9-a5ad-9c4bb8cf0d8d",
+        "839e68df-e070-4c82-bf65-2f464d1fc2b4",
+        "b68d7765-1d19-467d-a72f-e42f31453535",
+        "f3e875c1-4a16-451e-8c51-e959c0563510",
+        "a32ec3d0-cec0-4aa6-b538-f7da23f2edee",
+        "2378805c-0e8b-4478-853c-5e70bb79afed",
+        "a3926c76-2f1a-43b8-9e68-3ac5286c6388",
+        "e542d024-2337-4ca1-afc6-0f3c10e72295",
+        "e46956dc-c678-408f-887e-ba8a1e764e10",
+        "ea8712d4-c4cb-4733-8660-f1605be89a03",
+        "6abd006d-fb9b-4ff9-8192-90eefc8d84e4",
+        "331af383-d86b-4ae1-8776-6f6628860e56",
+        "92017e1b-3a0b-4d76-a722-5147a0241ec9",
+        "2baca8dc-9f50-49cc-a163-6d6ed8475cc8",
+        "9802f699-e7e8-4317-9173-29709471507e",
+        "6b8641a4-865d-4fcc-8499-46ef64a81ce7",
+        "8b18508a-5a64-41d8-ab0a-6a4d76a2a16f",
+        "f7320228-30b3-4f14-b813-3104c1ac608b",
+        "ea163b47-2602-4148-ba45-cce7bdb10e2a",
+        "ead58ec5-8ce5-425a-b964-9cb1169d5471",
+        "5c75e09c-d68b-4f8c-8f6d-e5eee4c07a6a",
+        "beda5d9a-88c0-4b4f-a9c5-b6783ed23731",
+        "8592f9a1-3b70-413c-b2ff-6c747fd8e3bb",
+        "bc67919c-5c23-4704-84f8-5558673e10e4",
+        "86a11fdd-bbb6-4aa0-80c5-df21cba36f20",
+        "0541b66e-9382-42c8-86be-26c77d0c3755",
+        "7ce46147-a070-485a-a986-e079a776b8b6",
+        "427ffa74-a8c4-47d7-8869-980bd8a46611",
+        "24197e7d-354a-4ea8-a4fa-47122bc24a95",
+        "73de8a6e-bbe0-4b1e-b6f8-45cece1a82cd",
+        "dc263c0f-294f-4798-94ff-7fbcb8386111",
+        "91a124be-e268-429d-937b-1824bee84138",
+        "6c1deebf-e129-4968-8722-f3a0810b5302",
+        "6c26b812-590d-4236-8b6e-4ec486aeddef",
+        "9b12539b-75fb-4058-8d01-b34e4f9a0271"
+      ],
+      "last_processed": "2025-10-01T20:38:43.429539",
+      "metadata": {
+        "filename": "otif_pull.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "csv_descriptions"
+      }
+    },
+    "docs/knowledge/csv_descriptions/OnTime_Data.md": {
+      "hash": "f5cc91de0dbdb3d35546ccc162bf1afbeaeae81e751f0a7ea03e95e04e8c09c9",
+      "vector_ids": [
+        "0f8a5d7b-6cf3-4333-96bc-9f75514dea20",
+        "4b2a449c-3064-4a15-8954-de6d488163ce",
+        "527b6ad1-d11f-4f48-b49f-2a433d7f7a56",
+        "ba4b56b8-7208-4cc8-a321-fd7238f65342",
+        "ae2ce857-c39c-4648-81b1-6d03ce6ac91a",
+        "9417ede0-0590-4250-b1f7-f72fe2e6ecea",
+        "89b90ba2-d0a1-4483-91dc-9715a7962b47",
+        "b6c66e5f-ddc3-46e3-98b0-94cf2c1272ba",
+        "c597be63-1ac7-4c11-afc2-99ba9a26a927",
+        "b9302746-1135-49f2-bb32-80294502e009",
+        "ebb746cd-be03-4b0d-8d46-5babb092b603",
+        "eea68ed7-c67a-4277-b9ce-c86251463a08",
+        "4f02a34a-3e94-4dcc-a218-f75349470303",
+        "d2575857-4437-4c5d-bd3a-cebe42ba383b",
+        "2487314d-33d3-441c-b0f9-d2c4c971a812",
+        "e43be88e-29ba-4971-94e9-3eca5f401470",
+        "521d9f6d-4c37-4940-b0e3-ab32745fc75b",
+        "093d62c2-3bc6-4fbd-b051-bad6337031c0",
+        "ffea7f29-e7cc-4390-a404-638c3925d650",
+        "fb2fa803-850b-4d06-97c5-08a0d8f99210",
+        "bfb43bf0-5d42-43b4-8ab2-b8a9a0a74f81",
+        "8e880b8f-2460-44d8-a243-22acc6351da1",
+        "3f83985b-121d-4df1-bc2e-ffbc3bf016f7",
+        "1130e036-1632-4a3f-a18e-194a0610255f",
+        "9f886e7f-d620-47ce-833e-942dbb62bb61",
+        "6eeddf88-eb9a-4b5e-85b1-6c421348bfb1",
+        "e7491b46-3551-4988-8d5d-119c58343460",
+        "8e2cac44-8d14-4bef-af06-c22606273e47",
+        "66cd7b04-8f40-456d-9f57-8f4c1d444667",
+        "040d161a-e616-46d6-842b-99837a6fbb49",
+        "c903019c-d37d-402f-b787-f9c71cfe407f",
+        "171c0736-74b9-41b6-a471-8836b37b17e5",
+        "41d100af-8416-40e1-a25a-2916483586e8",
+        "8e0e04f3-bd1c-4f13-a02a-29d5a0ade1db",
+        "c56dab85-11b6-4c33-abf2-c5e878e43d69",
+        "f8b720d1-a0ff-4ece-9df6-1d29668ba1a4",
+        "895c85aa-6cf0-4108-a2ca-726d20881ed6",
+        "03d40253-11fb-4c88-bb03-4b9ac0bb5986",
+        "b585816f-7d0c-47cf-ae62-4ac27a107c85",
+        "6655787b-bd43-41fb-bbe2-86e81f69efbb",
+        "373e47d7-4d3d-4342-993a-2e83e6125cfb",
+        "1751e19f-c1e2-4579-8f3c-20d52a6fe579",
+        "2f92f2bd-f098-4a26-97cc-c28458f5b6fc",
+        "b15ffbca-8900-4b53-8ab8-3b41f5ceeeda",
+        "25841c5c-a697-4fa8-856c-77a4a43ef695",
+        "44733c90-5ddc-452c-b331-62e56152dcf2",
+        "b5c4a556-88e5-4b9d-a797-19f6ade4c983",
+        "d04ae164-981e-4d3b-b366-add9d82d0b6a",
+        "f9780368-176f-4bf5-9d66-504cbba55580",
+        "697be613-d269-4842-a495-c2d246fcea2f"
+      ],
+      "last_processed": "2025-10-01T20:38:45.784365",
+      "metadata": {
+        "filename": "OnTime_Data.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "csv_descriptions"
+      }
+    },
+    "docs/knowledge/column_references/OnTime_Data_columns.md": {
+      "hash": "698de773367ee02da52dde8b22cffdbfdee402dcd86c15a871d439cde401971c",
+      "vector_ids": [
+        "6448f158-81a5-4c2f-9b7c-fc757d3dc0ae",
+        "5af8589f-45a0-46d8-a06f-beff0f3d4366",
+        "610255fd-9cf9-4d47-81ce-e3579437f886",
+        "88c0db79-8985-4a33-abc5-cc6f0628d66f"
+      ],
+      "last_processed": "2025-10-01T20:38:38.410914",
+      "metadata": {
+        "filename": "OnTime_Data_columns.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "column_references"
+      }
+    },
+    "docs/knowledge/column_references/otif_pull_columns.md": {
+      "hash": "415ed32f678d59265eb4b2ca7f2ea00cd6c4e5a0e13e183b89ec025097e3fbc1",
+      "vector_ids": [
+        "e42dc5bd-69f2-4e9f-afad-eb3aca116ad5",
+        "f83c2b7b-fc60-4b8a-9ec3-13f910189b41",
+        "f22bf9c3-8132-4bf0-8cf4-1dffa519c2b7",
+        "12b104ce-68a9-4087-96da-10c323872026"
+      ],
+      "last_processed": "2025-10-01T20:38:40.039644",
+      "metadata": {
+        "filename": "otif_pull_columns.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "column_references"
+      }
+    },
+    "docs/knowledge/column_references/fba_emailer_columns.md": {
+      "hash": "e6ea147134ac90175940ca0afa595f0366bdfb158718ebc9d8ee3fc9d3a824cf",
+      "vector_ids": [
+        "89855858-f86e-4ea7-b90b-4182e98e2240"
+      ],
+      "last_processed": "2025-09-28T19:37:23.740282",
+      "metadata": {
+        "filename": "fba_emailer_columns.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "column_references"
+      }
+    },
+    "docs/knowledge/column_references/bookingpickup_columns.md": {
+      "hash": "0715e7a225c43cb0b8624c9cd6134075830438ca652dcd6dff8a31afe1d971bb",
+      "vector_ids": [
+        "e9d578e2-94ae-4305-96ec-a6d14b50b419"
+      ],
+      "last_processed": "2025-09-28T19:37:24.679664",
+      "metadata": {
+        "filename": "bookingpickup_columns.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "column_references"
+      }
+    },
+    "docs/knowledge/csv_descriptions/fba_emailer.md": {
+      "hash": "6e9a101cfafed3036102b4da9e428091bb02fbcb2600b7fef4429799703ff900",
+      "vector_ids": [
+        "e8aa0834-b6d0-4e51-82c8-24f5075cc5a1",
+        "93378432-85b4-4585-9386-21c1a6f3d9ae",
+        "27d47653-18dd-4549-b288-b7b67656594a",
+        "2de7b0cf-1e71-43b1-b3dc-73bf9359ed75",
+        "2a6b8512-86cf-4fdd-8b59-9f56f27e05a3",
+        "85e1eb92-564a-4294-80c9-800ebc028516",
+        "a8ba3b48-f5bf-4525-ab0a-542adf4c2e09",
+        "998b46c7-3c88-496f-87c1-b4528ce0ba0c",
+        "6707b60a-d5ac-4c90-b418-14859fb5cee6",
+        "c0fa2dcd-b43d-4817-9a7c-7e9034e19ac0",
+        "cd5c2a22-00ca-4f0a-b78a-466074b81e48",
+        "8cc9cd55-658d-4fcd-98e5-bd5d97ef906c",
+        "bd86e525-1a2e-4ab5-9e2e-20b9c408211a",
+        "48d90190-74cc-4551-a873-59a4a09bb881",
+        "913a984d-7a51-4173-948a-674f53e54772",
+        "3bea2cbe-e44d-4258-8c28-f19d967bd756",
+        "35939aed-9306-4bb4-893d-b2f40679b3b3",
+        "6159afb6-c7b2-46c9-ba92-204585688356"
+      ],
+      "last_processed": "2025-09-28T19:37:32.751787",
+      "metadata": {
+        "filename": "fba_emailer.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "csv_descriptions"
+      }
+    },
+    "docs/knowledge/csv_descriptions/bookingpickup.md": {
+      "hash": "bfdc2bdc102af56723e00e133e2149365900a6aebf1367f264ff3cf7a8a12771",
+      "vector_ids": [
+        "a44409b6-a0f1-49eb-97a4-780a59d504dd",
+        "e88f2014-697a-402e-9bf4-1914950e66da",
+        "fa0a092a-4da6-430d-bdf6-0218b6b5202f",
+        "bf4e81a3-7f58-45bf-b691-1fb09ff0912f",
+        "abb8904b-52ec-4813-abaf-88e4199e2214",
+        "f875d3c4-7ab1-4040-87ff-8377f983014e",
+        "c0853308-368a-4808-aede-264206d90f77",
+        "ee1a6609-5184-4afd-9508-94986243d215",
+        "479ab060-6e96-459b-afea-40ed68230707",
+        "f104a2d9-69b2-4122-9c2f-e96a84aa3106",
+        "69f3754a-173f-40f4-8773-6841d4193686",
+        "6ab2cbff-1fd1-4a96-99f4-c09c5e54aaa5",
+        "0d308fd3-0ce5-4b67-8a0d-559deb48bfe1",
+        "4f957538-a45c-4d3d-be22-0a90a7228e85",
+        "0ac65b94-8615-49bd-8220-062af774c92a",
+        "f235b8fe-0b52-4bb3-831c-f24e426ba62a",
+        "287beac7-bc26-4b9b-be63-019adc065e66",
+        "49546f37-8e49-4405-b96b-e1fb3a1dcbb3",
+        "29cff6a8-2ed9-4d91-ba83-c12f3552731e",
+        "f6e0a9eb-2a23-4712-8e6f-751b6bdad0ac",
+        "9f263fd7-52a8-4197-9ed3-eb33ce85a948",
+        "5387b832-ab29-475f-8c3b-c2b20542ecdf",
+        "c313b315-5609-497e-bfff-b9c9510de267",
+        "669c9693-8f9a-411f-bc3a-741320d014a3"
+      ],
+      "last_processed": "2025-09-28T19:37:34.895802",
+      "metadata": {
+        "filename": "bookingpickup.md",
+        "folder": "docs/knowledge",
+        "knowledge_path": "csv_descriptions"
+      }
+    }
+  },
+  "last_updated": "2025-10-01T20:38:45.784372"
+}

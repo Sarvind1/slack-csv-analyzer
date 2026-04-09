@@ -1,0 +1,30 @@
+Procurement ka gyaanRazor Procurement process,
+
+    * Every month, we do demand projection for next rolling year (State of the art ML model)
+* PO creation, 
+    * Based on our current inventory position and demand projections, we calculate the date when our stock will finsh up
+    * We need to ensure that we inbound new stock 2 months before that date
+    * Using Tranportation (Supplier to warehouse) lead times and Production lead times (PO creation to pickup), we estimate PO creation date
+* PO confirmation, We align with the supplier on Qty, Price, Payment terms and Pickup date
+* PI payment and production ready date collections, we request suppliers to share their production ready date to plan for future orders
+* Production and PRD reconfirmation - Towards the end of the producion, we reconfirm the production ready so that we can book shipments
+* Shipment batching - Based on confirmed PRD, 
+    * we create shipment batches and initiate packing list collection
+    * Initiate QC if required
+    * Initiate commercial invoice colletion and payment
+* Based on packing lists, we ask freight forwarders to reserve container space (LCL-FCL, and so on)
+
+
+Impact of delays and 
+
+* Any delay more than 15 days can lead to out of stock, and therefore revenue loss 
+* If we go below our safety stock then we can't market our product
+* If we go out of stock then there are amazon penalties 
+* OOS also leads to lower product rank 
+
+
+Impact of multiple changes changes in PRD
+
+* Re-booking of vessels, re-booking of amazon warehouse inbound
+* As freight volumes and prices are noegotiated based on monthly pickup projections, we have to pay extra in case of under-booking and over-booking in a month
+* Lower supplier reliability and vendor score (High vendor score → More SKUs, POs
