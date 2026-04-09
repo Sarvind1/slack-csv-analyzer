@@ -1,193 +1,120 @@
-# Slack AI Agent
+# Slack Supply Chain Agent
 
-An AI-powered Slack bot that provides intelligent document search and CSV data analysis using LangChain, OpenAI, and vector embeddings. Built for enterprise knowledge bases and operational data queries.
+A Slack bot that leverages AI to analyze supply chain data, answer questions about CSV datasets, and search knowledge bases. Built with LangChain, Chroma, and OpenAI, it provides real-time access to OTIF (On-Time In-Full), booking, and FBA data through natural language queries.
 
 ## Features
 
-- **AI-Powered Chat**: Real-time conversation in Slack using OpenAI's GPT-4o-mini model
-- **Document Search**: Semantic search across knowledge bases using vector embeddings (RAG)
-- **CSV Data Analysis**: Automatic pandas code generation and execution for data queries
-- **Conversation Context**: Thread-aware chat history with context-aware query enhancement
-- **Safe Execution**: Sandboxed code execution for generated pandas analysis
-- **Deduplication**: Automatic handling of Slack event retries to prevent duplicate responses
-- **Production Ready**: Comprehensive logging, error handling, and SQLite chat storage
+- **Natural Language Queries**: Ask questions about supply chain data in plain English
+- **CSV Analysis**: Intelligent pandas code generation for analyzing CSV datasets
+- **Document Search**: Vector-based search across knowledge bases and CSV column references
+- **Chat History**: Persistent conversation storage with thread support
+- **Supply Chain Focus**: Pre-loaded with domain knowledge for OTIF, bookings, and FBA data
+- **Event Deduplication**: Prevents duplicate message processing
 
 ## Tech Stack
 
-- **Python 3.11+**
-- **Slack Bolt**: Native Slack bot framework with Socket Mode
-- **LangChain/LangGraph**: AI agent orchestration and tool integration
-- **OpenAI**: GPT-4o-mini for chat, text-embedding-3-large for vectors
-- **ChromaDB**: Vector database for semantic search
-- **Pandas**: CSV data analysis and manipulation
-- **SQLite**: Conversation history and chat logs
+- **Framework**: Python 3 with Slack Bolt
+- **AI/ML**: LangChain + LangGraph, OpenAI GPT-4o-mini
+- **Vector Store**: Chroma with OpenAI embeddings
+- **Data Processing**: pandas
+- **Storage**: SQLite for chat history
+- **Dependency Manager**: uv
 
 ## Setup
 
 ### Prerequisites
-- Python 3.11 or higher
-- Slack workspace with bot token
+
+- Python 3.9+
+- Slack workspace with app creation permissions
 - OpenAI API key
+- Slack Bot and App tokens
 
 ### Installation
 
-1. Clone and create virtual environment:
-```bash
-git clone <repo-url>
-cd slack-ai-agent
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-```
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd slack-supply-chain-agent
+   ```
 
-2. Install dependencies:
-```bash
-pip install -e .
-```
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-3. Configure environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your credentials:
-# - SLACK_APP_TOKEN (xapp-1-...)
-# - SLACK_BOT_TOKEN (xoxb-...)
-# - OPENAI_API_KEY (sk-...)
-```
+3. Install dependencies:
+   ```bash
+   uv pip install -r requirements.txt
+   # or: pip install -r requirements.txt
+   ```
 
-4. Organize your knowledge base:
-```bash
-mkdir -p docs/knowledge/csv_descriptions docs/knowledge/column_references docs/csvs
-# Place .md files in docs/knowledge/
-# Place .csv files in docs/csvs/
-```
+4. Configure environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   Fill in your `.env` file with:
+   - `SLACK_BOT_TOKEN`: xoxb-... token from your Slack app
+   - `SLACK_APP_TOKEN`: xapp-... token for socket mode
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `LOG_LEVEL`: Optional, defaults to INFO
 
-5. Run the bot:
+### Knowledge Base Setup
+
+Place your CSV files and documentation in:
+- `docs/csvs/` — Your data CSV files
+- `docs/knowledge/` — Knowledge base documents
+- `docs/knowledge/column_references/` — CSV column documentation
+- `docs/knowledge/csv_descriptions/` — Detailed CSV explanations
+
+The vector store will automatically index these documents on first run.
+
+## Usage
+
+### Running the Bot
+
 ```bash
 python main.py
 ```
 
-For local testing without Slack:
+The bot will connect to Slack and listen for mentions (@bot-name).
+
+### Local Testing
+
+Test the agent without Slack connection:
+
 ```bash
 python local_test.py
 ```
 
-## Usage
+This interactive interface lets you test queries and agent responses.
 
-### In Slack
+## Example Queries
 
-Mention the bot to ask questions:
-
-```
-@OTIS what were our top OTIF metrics last month?
-@OTIS analyze booking data for batch BATCH0010772
-@OTIS show me supplier performance trends
-```
-
-The bot automatically:
-- Searches your knowledge base for relevant context
-- Analyzes CSV data with AI-generated pandas code
-- Formats responses using Slack markdown
-- Maintains conversation context within threads
-
-### Local Testing
-
-Run `python local_test.py` for interactive testing:
-
-```
-👤 You: What's in the OnTime_Data?
-🤖 Assistant: The OnTime_Data CSV contains...
-```
-
-## Project Structure
-
-```
-slack-ai-agent/
-├── main.py                    # Slack bot entry point
-├── local_test.py              # Local testing interface
-├── pyproject.toml             # Dependencies
-├── .env.example               # Environment template
-│
-├── tools/
-│   ├── agent.py               # LangGraph AI agent with tools
-│   ├── vector_store.py        # ChromaDB vector operations
-│   ├── vectorstore.py         # High-level vector store interface
-│   ├── registry.py            # File change tracking
-│   ├── document_search.py     # Knowledge base search tool
-│   ├── csv_analyzer.py        # Data analysis tool
-│   └── storage.py             # Chat history (SQLite)
-│
-├── docs/
-│   ├── knowledge/
-│   │   ├── csv_descriptions/  # Dataset documentation
-│   │   └── column_references/ # Column mappings
-│   └── csvs/                  # Data files for analysis
-│
-└── chat_logs/                 # (auto-created) Conversation history
-```
+- "What's the OTIF rate for Q1?"
+- "Show me bookings from the last 7 days"
+- "Analyze the FBA emailer data and find trends"
+- "Which columns are available in the OnTime_Data table?"
 
 ## Architecture
 
-The agent uses a two-layer architecture:
-
-1. **Registry System**: Tracks file changes via hashing to efficiently update the vector store only when documents change
-2. **Vector Operations**: ChromaDB with OpenAI embeddings for semantic search across documents
-
-The bot automatically:
-- Enhances user queries (resolves pronouns, maps business terms)
-- Routes queries to document search or CSV analyzer
-- Generates and executes safe pandas code
-- Maintains thread-aware conversation context
-
-## Configuration
-
-### Environment Variables
-
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `SLACK_APP_TOKEN` | Slack app-level token | `xapp-1-...` |
-| `SLACK_BOT_TOKEN` | Slack bot user token | `xoxb-...` |
-| `OPENAI_API_KEY` | OpenAI API key | `sk-...` |
-| `LOG_LEVEL` | Logging level (optional) | `INFO`, `DEBUG` |
-
-### File Naming Conventions
-
-For proper CSV analysis, maintain consistent naming:
-- CSV file: `dataset_name.csv` (e.g., `otif_pull.csv`)
-- Description: `dataset_name.md` (e.g., `otif_pull.md`)
-- Columns: `dataset_name_columns.md` (e.g., `otif_pull_columns.md`)
-
-## Development
-
-Format and lint code:
-```bash
-black .
-ruff check .
-```
-
-Run tests (if available):
-```bash
-pytest
-```
+- **`main.py`** — Slack bot entry point with event handlers
+- **`local_test.py`** — Standalone testing interface
+- **`tools/agent.py`** — LangGraph AI agent with tool integration
+- **`tools/csv_analyzer.py`** — CSV analysis with AI-generated pandas code
+- **`tools/document_search.py`** — Vector store document retrieval
+- **`tools/vector_store.py`** — Chroma vector database management
+- **`tools/registry.py`** — Document registry and change tracking
+- **`tools/storage.py`** — Chat history storage
 
 ## Logging
 
-The bot logs to both console and file (`slack_ai_agent.log`) with:
-- Query enhancement details
-- Tool selection and execution
-- Duplicate event detection
-- CSV analysis code and results
-- All API interactions
+Logs are written to:
+- `slack_ai_agent.log` — Production bot logs
+- `local_test.log` — Test interface logs
 
-## Security
-
-- No credentials stored in code—use `.env` for sensitive data
-- CSV code executed in sandboxed environment with restricted builtins
-- Event deduplication prevents unintended duplicate responses
-- All API calls logged (without exposing credentials)
+Check `LOG_LEVEL` environment variable to adjust verbosity.
 
 ## License
 
-MIT
-
-## Support
-
-For issues or questions, check the logs in `slack_ai_agent.log` or review the CLAUDE.md file for detailed architecture notes.
+Proprietary

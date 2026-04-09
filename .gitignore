@@ -1,6 +1,7 @@
 # Environment variables
 .env
 .env.*
+!.env.example
 
 # Python
 __pycache__/
@@ -61,10 +62,14 @@ chat_logs_local_test/
 *.ipynb
 .ipynb_checkpoints/
 
-# Data files (keep templates, ignore large CSVs)
+# Data files (keep templates, ignore CSVs and large data)
 docs/csvs/*.csv
 docs/csvs/.DS_Store
 
 # Lock files for package managers
 uv.lock
 poetry.lock
+Pipfile.lock
+
+# Local copy/test files
+*copy.*
